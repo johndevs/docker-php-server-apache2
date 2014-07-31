@@ -1,11 +1,12 @@
 FROM ubuntu:14.10
 MAINTAINER John Ahlroos
 
-RUN apt-get update && apt-get install apache2 libapache2-mod-php5 -y
+RUN apt-get update && apt-get install apache2 libapache2-mod-php5 php5-curl -y
 
 EXPOSE 80
 
 ADD ./conf/apache.conf /etc/apache2/sites-available/000-default.conf
+ADD ./conf/php.ini /etc/php5/apache2/php.ini
 
 VOLUME /var/www
 
