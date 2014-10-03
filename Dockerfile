@@ -1,7 +1,7 @@
 FROM ubuntu:14.10
 MAINTAINER John Ahlroos
 
-RUN apt-get update && apt-get install apache2 libapache2-mod-php5 php5-curl -y
+RUN apt-get update && apt-get install apache2 libapache2-mod-php5 php5-curl php5-gd php5-sqlite3 -y
 
 EXPOSE 80
 
